@@ -1,6 +1,6 @@
 # Functionality of the application
 
-This application creates, removes, updates and retrieves the ToDo items. Each ToDo item can optionally have an attachment image. Each user only has access to TODO items that he/she has created.
+This application creates, removes, updates and retrieves the ToDo items. Each ToDo item can optionally have an attachment image. Once the attachment is uploaded it will trigger an SNS event to resize the image to a fixed size to be displayed in the client. Each user only has access to TODO items that he/she has created.
 
 
 # Functions implemented
