@@ -100,11 +100,6 @@ functions:
         Resource: arn:aws:s3:::${self:provider.environment.THUMBNAIL_IMAGES_BUCKET}/*
       - Effect: Allow
         Action:
-          - s3:GetObject
-          - s3:ListBucket
-        Resource: arn:aws:s3:::${self:provider.environment.TODO_IMAGES_BUCKET}/*
-      - Effect: Allow
-        Action:
           - dynamodb:Query
         Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODO_TABLE}/index/${self:provider.environment.TODO_ID_INDEX}
       - Effect: Allow
