@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "b03205dc-6fb7-408b-87bf-fe7ea23d46c2",
+		"name": "ToDo Serverless Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ToDo Endpoints",
+			"item": [
+				{
+					"name": "Get all todos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create todo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Water flowers\",\n\t\"dueDate\": \"2020-05-20\"\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"todos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update todo",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"to do\",\n\t\"dueDate\": \"2020-03-24\",\n\t\"done\": true\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos/12468520-dd7b-4dbb-8803-959e38de3ffb",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"todos",
+								"12468520-dd7b-4dbb-8803-959e38de3ffb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete todo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos/fc236228-6528-464f-abb9-49cbfd8ec662",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"todos",
+								"fc236228-6528-464f-abb9-49cbfd8ec662"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get attachment URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos/3836b777-9bc4-4429-9b79-ba4e4f5f91c0/attachment",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"todos",
+								"3836b777-9bc4-4429-9b79-ba4e4f5f91c0",
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ce2b42d4-8cc5-4f30-a6ed-e7f0f303c3fd",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "efb16c49-3866-4241-97d1-360ad72736d8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2e83c0fe-6650-44d5-a90f-4c27ff720d83",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "977c227e-2df3-42eb-9a48-ec25e2f7eeae",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "9fe4bb5a-69e4-4a71-b97e-c2cb2f9468de",
+			"key": "apiId",
+			"value": "cblclnctm5",
+			"type": "string"
+		},
+		{
+			"id": "f28caae5-12b3-4e71-ab35-f6749905536f",
+			"key": "authToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1FVXdOVE13TWpZd1F6VTBPRGRDTWtNeE9URkZNVVpETUVGRk5UTkNRVEExUkRORE16VkROUSJ9.eyJpc3MiOiJodHRwczovL2Rldi1rNmFoemFoOC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTY4MDQxMTk1NTM2MDQxNDY0MzMiLCJhdWQiOiJUaFBYMDZMejdJMmlaYWtPQzVsbjZhazZId3E0dFNiTSIsImlhdCI6MTU4OTczOTQ4NywiZXhwIjoxNTg5Nzc1NDg3LCJhdF9oYXNoIjoiTjJmS3EzR0RnOHBMU0E2VUQ4bWFodyIsIm5vbmNlIjoiSUx1N25RYjFzc1JhUUhDOE9CcV9MZ045ZzJFSFFFc1EifQ.BJGCc-MJHfVZpFWGWojb8GlKH4piyHjP1JreDSG6vdIiZytyqzvzfXqS_ArrfFIFpL4UQlno4ZQWWrvP7pVFFx_LeSPlcORjxM_T-oS0MBw6ZfvZaTmHl9nmL_sR4A1oyZ-vCMlizsoId_BH73qbdlir2iNC-dYdwHXMdbS4SQ4GLSun9gp-EL0btwgIl_fo9Bi-5Pq5VEfbJvsS-WGTCXkFgxd-jslm_v_ViJoMfbydILLJis_Uq3dskiy1W7SsO3Ur_CPiyPnC01HRH4lopfkGSZVPakHd-xAiArKQt2BT2KBgU_1yY8v6RtlfE7xNSDXDcaZOxXca3H05VfcF7g",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
